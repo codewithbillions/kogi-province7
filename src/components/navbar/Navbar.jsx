@@ -12,9 +12,9 @@ const Navbar = () => {
         <Image src="/facebook.png" alt="facebook" width={24} height={24} />
         <Image src="/instagram.png" alt="instagram" width={24} height={24} />
         <Image src="/youtube.png" alt="youtube" width={24} height={24} />
-         <Image src="/WhatsApp.png" alt="tiktok" width={24} height={24} />
+         <Image src="/WhatsApp.png" alt="whatsapp" width={24} height={24} />
       </div>
-      <div className={styles.logo}><Image src="/wlogo.png" width={200} height={60} />
+      <div className={styles.logo}><Image src="/wlogo.png" alt="logo" width={200} height={60} />
       </div>
       <div className={styles.links}>
         <ThemeToggle />
