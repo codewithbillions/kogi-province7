@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import Image from "next/image";
 import styles from "./writePage.module.css";
 import { useEffect, useState } from "react";
@@ -84,7 +85,7 @@ const WritePage = () => {
         desc: value,
         img: media,
         slug: slugify(title),
-        catSlug: catSlug || "announcement", //If not selected, choose the general category
+        catSlug: catSlug || "prayer", //If not selected, choose the general category
       }),
     });
 
@@ -103,14 +104,13 @@ const WritePage = () => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)}>
+        <option value="anouncement">announcement</option>
         <option value="prayer">prayer</option>
         <option value="evangelism">evangelism</option>
-        <option value="announcement">announcement</option>
-        <option value="programme">programme</option>
         <option value="men">men</option>
         <option value="women">women</option>
-        <option value="elders">elders</option>
         <option value="youths">youths</option>
+        <option value="youths">elders</option>
       </select>
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
@@ -142,11 +142,11 @@ const WritePage = () => {
           theme="bubble"
           value={value}
           onChange={setValue}
-          placeholder="write your post..."
+          placeholder="Tell your story..."
         />
       </div>
       <button className={styles.publish} onClick={handleSubmit}>
-        Post
+        Publish
       </button>
     </div>
   );
