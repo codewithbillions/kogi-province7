@@ -39,13 +39,13 @@ const WritePage = () => {
         (snapshot) => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          console.log("Upload is " + progress + "% done");
+          // console.log("Upload is " + progress + "% done");
           switch (snapshot.state) {
             case "paused":
-              console.log("Upload is paused");
+              // console.log("Upload is paused");
               break;
             case "running":
-              console.log("Upload is running");
+              // console.log("Upload is running");
               break;
           }
         },
@@ -106,12 +106,12 @@ const WritePage = () => {
       <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)}>
         <option value="prayer">prayer</option>
         <option value="evangelism">evangelism</option>
-        <option value="evangelism">announcement</option>
+        <option value="announcement">announcement</option>
         <option value="programme">programme</option>
-        <option value="fashion">men</option>
+        <option value="men">men</option>
         <option value="women">women</option>
         <option value="elders">elders</option>
-        <option value="youths">youth</option>
+        <option value="youths">youths</option>
       </select>
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
