@@ -85,7 +85,7 @@ const WritePage = () => {
         desc: value,
         img: media,
         slug: slugify(title),
-        catSlug: catSlug || "prayer", //If not selected, choose the general category
+        catSlug: catSlug || "announcement", //If not selected, choose the general category
       }),
     });
 
@@ -106,6 +106,7 @@ const WritePage = () => {
       <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)}>
         <option value="prayer">prayer</option>
         <option value="evangelism">evangelism</option>
+        <option value="evangelism">announcement</option>
         <option value="programme">programme</option>
         <option value="fashion">men</option>
         <option value="women">women</option>
