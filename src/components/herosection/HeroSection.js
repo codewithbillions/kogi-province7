@@ -15,10 +15,10 @@ function HeroSection() {
         <Image
           priority
           src={IMAGE_URL}
-          layout="fill"
+          fill
           objectFit="cover"
           objectPosition="center"
-          alt="hero image example"
+          alt="hero image"
         />
       </div>
 
