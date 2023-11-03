@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import styles from "./writePage.module.css";
 import { useEffect, useState } from "react";
@@ -37,13 +38,13 @@ const WritePage = () => {
         (snapshot) => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          // console.log("Upload is " + progress + "% done");
+          console.log("Upload is " + progress + "% done");
           switch (snapshot.state) {
             case "paused":
-              // console.log("Upload is paused");
+              console.log("Upload is paused");
               break;
             case "running":
-              // console.log("Upload is running");
+              console.log("Upload is running");
               break;
           }
         },
