@@ -13,9 +13,16 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
-import ReactQuill from "react-quill";
+// import ReactQuill from "react-quill";
+import dynamic from "next/dynamic";
+let ReactQuill;
 
-const WritePage = ({ params: {slug} }) => {
+// Check if the code is running on the client side
+if (typeof window !== "undefined") {
+  ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+}
+
+const WritePage = () => {
   
   const { status } = useSession();
   const router = useRouter();
@@ -96,7 +103,7 @@ const WritePage = ({ params: {slug} }) => {
       router.push(`/posts/${data.slug}`);
     }
   };
-  console.log(`Building slug: ${slug}`)
+  
   return (
     <div className={styles.container}>
       <input
