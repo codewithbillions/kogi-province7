@@ -62,7 +62,7 @@ const WritePage = () => {
     upload();
   }, [file]);
 
-  if (status === "loading") {
+  if (router.isFallback) {
     return <div className={styles.loading}>Loading...</div>;
   }
 
@@ -79,7 +79,7 @@ const WritePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
-    const res = await fetch("http://localhost:3000/posts/api/posts", {
+    const res = await fetch(`posts/api/posts`, {
       method: "POST",
       body: JSON.stringify({
         title,
@@ -89,10 +89,10 @@ const WritePage = () => {
         catSlug: catSlug || "prayer", //If not selected, choose the general category
       }),
     });
-
+S
     if (res.status === 200) {
       const data = await res.json();
-      router.push(`http://localhost:3000/posts/${data.slug}`);
+      router.push(`posts/${data.slug}`);
     }
   };
 
