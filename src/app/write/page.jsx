@@ -79,7 +79,7 @@ const WritePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
-    const res = await fetch("/api/posts", {
+    const res = await fetch("http://localhost:3000/posts/api/posts", {
       method: "POST",
       body: JSON.stringify({
         title,
@@ -92,7 +92,7 @@ const WritePage = () => {
 
     if (res.status === 200) {
       const data = await res.json();
-      router.push(`/posts/${data.slug}`);
+      router.push(`http://localhost:3000/posts/${data.slug}`);
     }
   };
 
