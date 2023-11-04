@@ -15,7 +15,8 @@ import {
 import { app } from "@/utils/firebase";
 import ReactQuill from "react-quill";
 
-const WritePage = () => {
+const WritePage = ({ params: {slug} }) => {
+  
   const { status } = useSession();
   const router = useRouter();
 
@@ -62,7 +63,7 @@ const WritePage = () => {
     upload();
   }, [file]);
 
-  if (router.isFallback) {
+  if (status === "loading") {
     return <div className={styles.loading}>Loading...</div>;
   }
 
@@ -79,7 +80,7 @@ const WritePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
-    const res = await fetch(`posts/api/posts`, {
+    const res = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({
         title,
@@ -89,13 +90,13 @@ const WritePage = () => {
         catSlug: catSlug || "prayer", //If not selected, choose the general category
       }),
     });
-S
+
     if (res.status === 200) {
       const data = await res.json();
-      router.push(`posts/${data.slug}`);
+      router.push(`/posts/${data.slug}`);
     }
   };
-
+  console.log(`Building slug: ${slug}`)
   return (
     <div className={styles.container}>
       <input
