@@ -9,10 +9,18 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.social}>
+      <Link href="/https://www.facebook.com/groups/2104676666546749/?ref=share" >
         <Image src="/facebook.png" alt="facebook" width={24} height={24} />
-        <Image src="/instagram.png" alt="instagram" width={24} height={24} />
-        <Image src="/youtube.png" alt="youtube" width={24} height={24} />
-         <Image src="/WhatsApp.png" alt="whatsapp" width={24} height={24} />
+      </Link>
+        <Link href="/https://www.instagram.com/rccg.kogi.province7">
+          <Image src="/instagram.png" alt="instagram" width={24} height={24} />
+        </Link>
+        <Link href="/https://youtube.com/@RCCGKOGIPROVINCE7?si=IZj2Ghx-agQp_Z5K">
+          <Image src="/youtube.png" alt="youtube" width={24} height={24} />
+        </Link>
+        <Link>
+          <Image src="/WhatsApp.png" alt="whatsapp" width={24} height={24} />
+        </Link>
       </div>
       <div className={styles.logo}><Image src="/wlogo.png" alt="logo" width={200} height={60} />
       </div>

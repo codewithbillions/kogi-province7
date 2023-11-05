@@ -8,11 +8,11 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="lama blog" width={50} height={50} />
+          <Image src="/logo.png" alt="logo" width={50} height={50} />
           <h1 className={styles.logoText}>RCCG Kogi Province 7</h1>
         </div>
         <p className={styles.desc}>
-        Open Heavens Mega Parish, Isanlu Makutu, Kogi State, Nigeria
+        Open Heavens Mega Parish, Isanlu Makutu
         </p>
         <div className={styles.icons}>
           <Image src="/facebook.png" alt="" width={18} height={18} />
@@ -24,23 +24,23 @@ const Footer = () => {
       <div className={styles.links}>
         <div className={styles.list}>
           <span className={styles.listTitle}>Links</span>
-          <Link href="/">Homepage</Link>
+          <Link href="/">Home</Link>
           <Link href="/">Post</Link>
           <Link href="/">About</Link>
           <Link href="/">Contact</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
-          <Link href="/">Prayer</Link>
-          <Link href="/">Announcement</Link>
-          <Link href="/">Evangelism</Link>
-          <Link href="/">Programme</Link>
+          <Link href="/posts">Prayer</Link>
+          <Link href="/posts">Announcement</Link>
+          <Link href="/posts">Evangelism</Link>
+          <Link href="/posts">Programme</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>
-          <Link href="/">Facebook</Link>
-          <Link href="/">Instagram</Link>
-          <Link href="/">Youtube</Link>
+          <Link href="/https://www.facebook.com/groups/2104676666546749/?ref=share">Facebook</Link>
+          <Link href="/https://www.instagram.com/rccg.kogi.province7">Instagram</Link>
+          <Link href="/https://youtube.com/@RCCGKOGIPROVINCE7?si=IZj2Ghx-agQp_Z5K">Youtube</Link>
           <Link href="/">WhatsApp</Link>
         </div>
       </div>
