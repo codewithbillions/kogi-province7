@@ -12,7 +12,7 @@ const Footer = () => {
           <h1 className={styles.logoText}>RCCG Kogi Province 7</h1>
         </div>
         <p className={styles.desc}>
-        Open Heavens Mega Parish, Isanlu Makutu
+        Open Heavens Sanctuary, Isanlu Makutu
         </p>
         <div className={styles.social}>
       <Link href="/https://www.facebook.com/groups/2104676666546749/?ref=share" >

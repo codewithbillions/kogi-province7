@@ -24,7 +24,7 @@ function HeroSection() {
 
       <div className={heroContent}>
         <h1>RCCG Kogi Province 7</h1>
-        <p>Open Heavens Mega Parish, Isanlu Makutu</p>
+        <p>Open Heavens Sanctuary, Isanlu Makutu</p>
       </div>
     </div>
     
