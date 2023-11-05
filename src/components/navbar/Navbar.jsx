@@ -12,13 +12,13 @@ const Navbar = () => {
       <Link href="/https://www.facebook.com/groups/2104676666546749/?ref=share" >
         <Image src="/facebook.png" alt="facebook" width={24} height={24} />
       </Link>
-        <Link href="/https://www.instagram.com/rccg.kogi.province7">
+        <Link href="https://www.instagram.com/rccg.kogi.province7">
           <Image src="/instagram.png" alt="instagram" width={24} height={24} />
         </Link>
-        <Link href="/https://youtube.com/@RCCGKOGIPROVINCE7?si=IZj2Ghx-agQp_Z5K">
+        <Link href="https://youtube.com/@RCCGKOGIPROVINCE7?si=IZj2Ghx-agQp_Z5K">
           <Image src="/youtube.png" alt="youtube" width={24} height={24} />
         </Link>
-        <Link>
+        <Link href="/">
           <Image src="/WhatsApp.png" alt="whatsapp" width={24} height={24} />
         </Link>
       </div>

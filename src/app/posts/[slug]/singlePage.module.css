@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Pacifico&display=swap');
+
 .infoContainer {
   display: flex;
   align-items: center;
   gap: 50px;
+  /* font-family: 'Pacifico', cursive; */
 }
 
 .textContainer {
@@ -11,6 +14,7 @@
 .title {
   font-size: 64px;
   margin-bottom: 50px;
+  font-family: 'Pacifico', cursive;
 }
 
 .user {
@@ -35,11 +39,13 @@
   flex-direction: column;
   gap: 5px;
   color: var(--softTextColor);
+  /* font-family: 'Pacifico', cursive; */
 }
 
 .username {
   font-size: 20px;
   font-weight: 500;
+  font-family: 'Pacifico', cursive;
 }
 
 .imageContainer {
@@ -66,6 +72,8 @@
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 20px;
+  /* font-family: 'Pacifico', cursive; */
+
 }
 
 @media screen and (max-width: 1536px) {
