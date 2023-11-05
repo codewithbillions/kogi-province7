@@ -16,9 +16,8 @@ import { app } from "@/utils/firebase";
 // import ReactQuill from "react-quill";
 import dynamic from "next/dynamic";
 let ReactQuill;
-
 // Check if the code is running on the client side
-if (typeof window !== "undefined") {
+if (typeof document !== "undefined") {
   ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 }
 
